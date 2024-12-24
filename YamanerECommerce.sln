@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{3ED93137-5634-4E57-BEBE-8BCA3581A3DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamanerECommerce.Domain", "Core\YamanerECommerce.Domain\YamanerECommerce.Domain.csproj", "{1F13B7D2-C4FD-4341-A2C9-907EA2ECD46F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{0A996260-62CD-4C7A-988C-F7B8484470FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamanerECommerce.Persistence", "Infrastructure\YamanerECommerce.Persistence\YamanerECommerce.Persistence.csproj", "{9B83874E-44CB-480D-9A02-4DAFDB08E2F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{E6EE3307-3935-4878-BA33-5F1917ED59BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamanerECommerce.WebApi", "Presentation\YamanerECommerce.WebApi\YamanerECommerce.WebApi.csproj", "{550C7C13-4000-440D-9C2E-1B98E18DB6EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamanerECommerce.Application", "Core\YamanerECommerce.Application\YamanerECommerce.Application.csproj", "{6DB68E61-0B7A-4750-8748-CCF8EC11C8E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F13B7D2-C4FD-4341-A2C9-907EA2ECD46F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F13B7D2-C4FD-4341-A2C9-907EA2ECD46F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F13B7D2-C4FD-4341-A2C9-907EA2ECD46F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F13B7D2-C4FD-4341-A2C9-907EA2ECD46F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B83874E-44CB-480D-9A02-4DAFDB08E2F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B83874E-44CB-480D-9A02-4DAFDB08E2F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B83874E-44CB-480D-9A02-4DAFDB08E2F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B83874E-44CB-480D-9A02-4DAFDB08E2F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{550C7C13-4000-440D-9C2E-1B98E18DB6EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{550C7C13-4000-440D-9C2E-1B98E18DB6EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{550C7C13-4000-440D-9C2E-1B98E18DB6EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{550C7C13-4000-440D-9C2E-1B98E18DB6EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DB68E61-0B7A-4750-8748-CCF8EC11C8E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DB68E61-0B7A-4750-8748-CCF8EC11C8E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DB68E61-0B7A-4750-8748-CCF8EC11C8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DB68E61-0B7A-4750-8748-CCF8EC11C8E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1F13B7D2-C4FD-4341-A2C9-907EA2ECD46F} = {3ED93137-5634-4E57-BEBE-8BCA3581A3DF}
+		{9B83874E-44CB-480D-9A02-4DAFDB08E2F9} = {0A996260-62CD-4C7A-988C-F7B8484470FE}
+		{550C7C13-4000-440D-9C2E-1B98E18DB6EF} = {E6EE3307-3935-4878-BA33-5F1917ED59BF}
+		{6DB68E61-0B7A-4750-8748-CCF8EC11C8E6} = {3ED93137-5634-4E57-BEBE-8BCA3581A3DF}
+	EndGlobalSection
+EndGlobal
