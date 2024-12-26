@@ -1,4 +1,6 @@
 using YamanerECommerce.Application.Features.CQRS.Handlers.CartHandlers;
+using YamanerECommerce.Application.Features.CQRS.Handlers.OrderHandlers;
+using YamanerECommerce.Application.Features.CQRS.Queries.OrderQueries;
 using YamanerECommerce.Application.Interfaces;
 using YamanerECommerce.Persistence.Context;
 using YamanerECommerce.Persistence.Repositories;
@@ -15,6 +17,13 @@ builder.Services.AddScoped<GetCartByIdQueryHandler>();
 builder.Services.AddScoped<CreateCartCommandHandler>();
 builder.Services.AddScoped<UpdateCartCommandHandler>();
 builder.Services.AddScoped<RemoveCartCommandHandler>();
+
+builder.Services.AddScoped<GetOrderByIdQueryHandler>();
+builder.Services.AddScoped<GetOrderQueryHandler>();
+builder.Services.AddScoped<CreateOrderCommandHandler>();
+builder.Services.AddScoped<UpdateOrderCommandHandler>();
+builder.Services.AddScoped<RemoveOrderCommandHandler>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
