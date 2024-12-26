@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using YamanerECommerce.Application.Features.CQRS.Commands.CartCommands;
 using YamanerECommerce.Application.Features.CQRS.Handlers.CartHandlers;
 using YamanerECommerce.Application.Features.CQRS.Queries.CartQueries;
 
@@ -7,7 +8,7 @@ namespace YamanerECommerce.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class Carts : ControllerBase
+    public class CartsController : ControllerBase
     {
         private readonly CreateCartCommandHandler _createCartCommandHandler;
         private readonly GetCartByIdQueryHandler _getCartByIdQueryHandler;
@@ -15,7 +16,7 @@ namespace YamanerECommerce.WebApi.Controllers
         private readonly UpdateCartCommandHandler _updateCartCommandHandler;
         private readonly RemoveCartCommandHandler _removeCartCommandHandler;
 
-        public Carts(CreateCartCommandHandler createCartCommandHandler, 
+        public CartsController(CreateCartCommandHandler createCartCommandHandler, 
             GetCartByIdQueryHandler getCartByIdQueryHandler, 
             GetCartQueryHandler getCartQueryHandler, 
             UpdateCartCommandHandler updateCartCommandHandler,
@@ -35,9 +36,28 @@ namespace YamanerECommerce.WebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task <IActionResult> GetCart (in id)
+        public async Task <IActionResult> GetCart (int id) 
         {
-            var value = await _getCartByIdQueryHandler.Handle(new GetCartByIdQuery)
+            var value = await _getCartByIdQueryHandler.Handle(new GetCartByIdQuery(id));
+            return Ok(value);
+        }
+        [HttpPost]
+        public async Task <IActionResult> CreateCart(CreateCartCommand command)
+        {
+            await _createCartCommandHandler.Handle(command);
+            return Ok("cart bilgisi eklendi");
+        }
+        [HttpDelete]
+        public async Task <IActionResult>  RemoveCart (int id)
+        {
+            await _removeCartCommandHandler.Handle(new RemoveCartCommand(id));
+            return Ok("cart bilgisi silindi");
+        }
+        [HttpPut]
+        public async Task <IActionResult> UpdateCart(UpdateCartCommand command)
+        {  await _updateCartCommandHandler.Handle(command);
+            return Ok("cart bilgisi güncellendi");
+        
         }
     }
 }
