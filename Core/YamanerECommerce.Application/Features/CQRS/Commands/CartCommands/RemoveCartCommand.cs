@@ -13,7 +13,7 @@ namespace YamanerECommerce.Application.Features.CQRS.Commands.CartCommands
       
         public RemoveCartCommand(int id) 
         {
-            id = id;
+            Id = id;
         }
     }
 }

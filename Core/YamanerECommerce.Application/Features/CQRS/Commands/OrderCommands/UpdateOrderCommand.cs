@@ -12,6 +12,6 @@ namespace YamanerECommerce.Application.Features.CQRS.Commands.OrderCommands
         public int UserId { get; set; }
         public DateTime OrderDate { get; set; }
         public float TotalAmount { get; set; }
-        public string Status { get; set; }
+        public string ? Status { get; set; }
     }
 }

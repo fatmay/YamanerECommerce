@@ -12,7 +12,7 @@ namespace YamanerECommerce.Application.Features.CQRS.Commands.OrderCommands
 
         public RemoveOrderCommand(int id)
         {
-            id = id;
+            Id = id;
         }
     }
 }
