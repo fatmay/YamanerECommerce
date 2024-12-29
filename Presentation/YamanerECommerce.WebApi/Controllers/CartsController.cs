@@ -12,15 +12,15 @@ namespace YamanerECommerce.WebApi.Controllers
     {
         private readonly CreateCartCommandHandler _createCartCommandHandler;
         private readonly GetCartByIdQueryHandler _getCartByIdQueryHandler;
-        private readonly GetCartQueryHandler _getCartQueryHandler;
-        private readonly UpdateCartCommandHandler _updateCartCommandHandler;
-        private readonly RemoveCartCommandHandler _removeCartCommandHandler;
+        private readonly GetCartItemQueryHandler _getCartQueryHandler;
+        private readonly UpdateCartItemCommandHandler _updateCartCommandHandler;
+        private readonly RemoveCartItemCommandHandler _removeCartCommandHandler;
 
         public CartsController(CreateCartCommandHandler createCartCommandHandler, 
             GetCartByIdQueryHandler getCartByIdQueryHandler, 
-            GetCartQueryHandler getCartQueryHandler, 
-            UpdateCartCommandHandler updateCartCommandHandler,
-            RemoveCartCommandHandler removeCartCommandHandler)
+            GetCartItemQueryHandler getCartQueryHandler, 
+            UpdateCartItemCommandHandler updateCartCommandHandler,
+            RemoveCartItemCommandHandler removeCartCommandHandler)
         {
             _createCartCommandHandler = createCartCommandHandler;
             _getCartByIdQueryHandler = getCartByIdQueryHandler;

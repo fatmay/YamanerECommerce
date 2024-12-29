@@ -13,11 +13,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddScoped<YamanerECommerceContext>();
 builder.Services.AddScoped(typeof(IRepository<>),typeof(Repository<>));
 
-builder.Services.AddScoped<GetCartQueryHandler>();
+builder.Services.AddScoped<GetCartItemQueryHandler>();
 builder.Services.AddScoped<GetCartByIdQueryHandler>();
 builder.Services.AddScoped<CreateCartCommandHandler>();
-builder.Services.AddScoped<UpdateCartCommandHandler>();
-builder.Services.AddScoped<RemoveCartCommandHandler>();
+builder.Services.AddScoped<UpdateCartItemCommandHandler>();
+builder.Services.AddScoped<RemoveCartItemCommandHandler>();
 
 builder.Services.AddScoped<GetOrderByIdQueryHandler>();
 builder.Services.AddScoped<GetOrderQueryHandler>();
