@@ -10,5 +10,8 @@ namespace YamanerECommerce.Application.Features.CQRS.Commands.CartCommands
     {
         public int Id { get; set; }
         public int UserId { get; set; }
+        public DateTime OrderDate { get; set; }
+        public float TotalAmount { get; set; }
+        public string Status { get; set; }
     }
 }

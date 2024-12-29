@@ -21,6 +21,7 @@ namespace YamanerECommerce.Application.Features.CQRS.Handlers.CartHandlers
         {
             var values=await _repository.GetByIdAsync(command.Id);
             values.UserId=command.UserId;
+            await _repository.UpdateAsync(values);
         }
     }
 }

@@ -29,14 +29,14 @@ namespace YamanerECommerce.WebApi.Controllers
             _removeCartCommandHandler = removeCartCommandHandler;
         }
         [HttpGet]
-        public async Task <IActionResult> CartList()
+        public async Task<IActionResult> CartList()
         {
             var values = await _getCartQueryHandler.Handle();
             return Ok(values);
         }
 
         [HttpGet("{id}")]
-        public async Task <IActionResult> GetCart (int id) 
+        public async Task<IActionResult> GetCart(int id)
         {
             var value = await _getCartByIdQueryHandler.Handle(new GetCartByIdQuery(id));
             return Ok(value);
@@ -48,7 +48,7 @@ namespace YamanerECommerce.WebApi.Controllers
             return Ok("cart bilgisi eklendi");
         }
         [HttpDelete]
-        public async Task <IActionResult>  RemoveCart (int id)
+        public async Task<IActionResult> RemoveCart(int id)
         {
             await _removeCartCommandHandler.Handle(new RemoveCartCommand(id));
             return Ok("cart bilgisi silindi");
