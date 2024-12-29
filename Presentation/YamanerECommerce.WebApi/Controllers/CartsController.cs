@@ -12,15 +12,15 @@ namespace YamanerECommerce.WebApi.Controllers
     {
         private readonly CreateCartCommandHandler _createCartCommandHandler;
         private readonly GetCartByIdQueryHandler _getCartByIdQueryHandler;
-        private readonly GetCartItemQueryHandler _getCartQueryHandler;
-        private readonly UpdateCartItemCommandHandler _updateCartCommandHandler;
-        private readonly RemoveCartItemCommandHandler _removeCartCommandHandler;
+        private readonly GetCartQueryHandler _getCartQueryHandler;
+        private readonly UpdateCartCommandHandler _updateCartCommandHandler;
+        private readonly RemoveCartCommandHandler _removeCartCommandHandler;
 
         public CartsController(CreateCartCommandHandler createCartCommandHandler, 
             GetCartByIdQueryHandler getCartByIdQueryHandler, 
-            GetCartItemQueryHandler getCartQueryHandler, 
-            UpdateCartItemCommandHandler updateCartCommandHandler,
-            RemoveCartItemCommandHandler removeCartCommandHandler)
+            GetCartQueryHandler getCartQueryHandler, 
+            UpdateCartCommandHandler updateCartCommandHandler, 
+            RemoveCartCommandHandler removeCartCommandHandler)
         {
             _createCartCommandHandler = createCartCommandHandler;
             _getCartByIdQueryHandler = getCartByIdQueryHandler;
@@ -28,6 +28,7 @@ namespace YamanerECommerce.WebApi.Controllers
             _updateCartCommandHandler = updateCartCommandHandler;
             _removeCartCommandHandler = removeCartCommandHandler;
         }
+
         [HttpGet]
         public async Task<IActionResult> CartList()
         {

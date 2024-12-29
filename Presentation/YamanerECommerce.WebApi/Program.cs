@@ -31,6 +31,12 @@ builder.Services.AddScoped<CreateOrderItemCommandHandler>();
 builder.Services.AddScoped<UpdateOrderItemCommandHandeler>();
 builder.Services.AddScoped<RemoveOrderItemCommandHandler>();
 
+builder.Services.AddScoped<GetCartQueryHandler>();
+builder.Services.AddScoped<GetCartByIdQueryHandler>();
+builder.Services.AddScoped<CreateCartCommandHandler>();
+builder.Services.AddScoped<UpdateCartCommandHandler>();
+builder.Services.AddScoped<RemoveCartCommandHandler>();
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
