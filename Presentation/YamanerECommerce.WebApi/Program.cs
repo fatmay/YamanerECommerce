@@ -1,5 +1,6 @@
 using YamanerECommerce.Application.Features.CQRS.Handlers.CartHandlers;
 using YamanerECommerce.Application.Features.CQRS.Handlers.OrderHandlers;
+using YamanerECommerce.Application.Features.CQRS.Handlers.OrderItemHandlers;
 using YamanerECommerce.Application.Features.CQRS.Queries.OrderQueries;
 using YamanerECommerce.Application.Interfaces;
 using YamanerECommerce.Persistence.Context;
@@ -23,6 +24,12 @@ builder.Services.AddScoped<GetOrderQueryHandler>();
 builder.Services.AddScoped<CreateOrderCommandHandler>();
 builder.Services.AddScoped<UpdateOrderCommandHandler>();
 builder.Services.AddScoped<RemoveOrderCommandHandler>();
+
+builder.Services.AddScoped<GetOrderItemQueryHandler>();
+builder.Services.AddScoped<GetOrderItemByIdQueryHandler>();
+builder.Services.AddScoped<CreateOrderItemCommandHandler>();
+builder.Services.AddScoped<UpdateOrderItemCommandHandeler>();
+builder.Services.AddScoped<RemoveOrderItemCommandHandler>();
 
 
 builder.Services.AddControllers();
