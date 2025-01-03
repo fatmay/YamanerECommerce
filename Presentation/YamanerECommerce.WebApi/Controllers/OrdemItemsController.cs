@@ -32,7 +32,7 @@ namespace YamanerECommerce.WebApi.Controllers
             _removeOrderItemCommandHandler = removeOrderItemCommandHandler;
         }
         [HttpGet]
-        public async Task<IActionResult> CartList()
+        public async Task<IActionResult> OrderItemList()
         {
             var values = await _getOrderItemQueryHandler.Handle();
             return Ok(values);

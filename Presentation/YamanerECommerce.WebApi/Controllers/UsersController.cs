@@ -57,7 +57,7 @@ namespace YamanerECommerce.WebApi.Controllers
             return Ok("user bilgisi silindi");
         }
         [HttpPut]
-        public async Task<IActionResult> UpdateCart(UpdateUserCommand command)
+        public async Task<IActionResult> UpdateUser(UpdateUserCommand command)
         {
             await _updateUserCommandHandler.Handle(command);
             return Ok("user bilgisi güncellendi");
