@@ -12,8 +12,8 @@ using YamanerECommerce.Persistence.Context;
 namespace YamanerECommerce.Persistence.Migrations
 {
     [DbContext(typeof(YamanerECommerceContext))]
-    [Migration("20241224170026_mig_first")]
-    partial class mig_first
+    [Migration("20241231173912_initialCreate")]
+    partial class initialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
