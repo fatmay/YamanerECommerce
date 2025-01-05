@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{3ED93137-5634-4E57-BEBE-8BCA3581A3DF}"
 EndProject
@@ -16,6 +16,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamanerECommerce.WebApi", "Presentation\YamanerECommerce.WebApi\YamanerECommerce.WebApi.csproj", "{550C7C13-4000-440D-9C2E-1B98E18DB6EF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamanerECommerce.Application", "Core\YamanerECommerce.Application\YamanerECommerce.Application.csproj", "{6DB68E61-0B7A-4750-8748-CCF8EC11C8E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{E7F95B40-C9EE-4C0D-93BC-E29DFA2B2FD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YamanerECommerce.WebUI", "Frontends\YamanerECommerce.WebUI\YamanerECommerce.WebUI.csproj", "{91090059-9C08-438C-B113-5D034A9FA9DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,10 @@ Global
 		{6DB68E61-0B7A-4750-8748-CCF8EC11C8E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DB68E61-0B7A-4750-8748-CCF8EC11C8E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DB68E61-0B7A-4750-8748-CCF8EC11C8E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91090059-9C08-438C-B113-5D034A9FA9DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91090059-9C08-438C-B113-5D034A9FA9DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91090059-9C08-438C-B113-5D034A9FA9DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91090059-9C08-438C-B113-5D034A9FA9DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,5 +56,6 @@ Global
 		{9B83874E-44CB-480D-9A02-4DAFDB08E2F9} = {0A996260-62CD-4C7A-988C-F7B8484470FE}
 		{550C7C13-4000-440D-9C2E-1B98E18DB6EF} = {E6EE3307-3935-4878-BA33-5F1917ED59BF}
 		{6DB68E61-0B7A-4750-8748-CCF8EC11C8E6} = {3ED93137-5634-4E57-BEBE-8BCA3581A3DF}
+		{91090059-9C08-438C-B113-5D034A9FA9DF} = {E7F95B40-C9EE-4C0D-93BC-E29DFA2B2FD7}
 	EndGlobalSection
 EndGlobal

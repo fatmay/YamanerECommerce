@@ -2,6 +2,7 @@ using YamanerECommerce.Application.Features.CQRS.Handlers.CartHandlers;
 using YamanerECommerce.Application.Features.CQRS.Handlers.OrderHandlers;
 using YamanerECommerce.Application.Features.CQRS.Handlers.OrderItemHandlers;
 using YamanerECommerce.Application.Features.CQRS.Handlers.ProductHandlers;
+using YamanerECommerce.Application.Features.CQRS.Handlers.StockHandlers;
 using YamanerECommerce.Application.Features.CQRS.Handlers.UserHandlers;
 using YamanerECommerce.Application.Features.CQRS.Queries.OrderQueries;
 using YamanerECommerce.Application.Features.CQRS.Queries.ProductQueries;
@@ -51,6 +52,18 @@ builder.Services.AddScoped <GetProductQueryHandler>();
 builder.Services.AddScoped<UpdateProductCommandHandler>();
 builder.Services.AddScoped <RemoveProductCommandHandler>();
 builder.Services.AddScoped <CreateProductCommandHandler>();
+
+//Stock
+builder.Services.AddScoped<GetStockByIdQueryHandler>();
+builder.Services.AddScoped<GetStockQueryHandler>();
+builder.Services.AddScoped<CreateStockCommandHandler>();
+builder.Services.AddScoped<UpdateStockCommandHandler>();
+builder.Services.AddScoped<RemoveStockCommandHandler>();
+
+//Features
+builder.Services.AddAplicationService(builder.Configuration);
+
+
 
 
 builder.Services.AddControllers();
